@@ -8,10 +8,6 @@ import requests, logging
 AKISMET_URL = 'http://%s.rest.akismet.com/1.1/comment-check'
 LOGGER = logging.getLogger('bambu.comments')
 
-class CustomTitleString(str):
-    def title(self):
-        return str(self[6:]).title()
-
 class Enquiry(models.Model):
     name = models.CharField(max_length = 50)
     email = models.EmailField(max_length = 200, db_index = True)
@@ -81,4 +77,3 @@ class Enquiry(models.Model):
         ordering = ('-sent',)
         get_latest_by = 'sent'
         db_table = 'enquiries_enquiry'
-        app_label = CustomTitleString('bambu_enquiries')
