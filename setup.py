@@ -4,7 +4,7 @@ from os import path
 
 setup(
     name = 'bambu-enquiries',
-    version = '2.0',
+    version = '2.0.1',
     description = 'A simple model and contact form',
     author = 'Steadman',
     author_email = 'mark@steadman.io',
