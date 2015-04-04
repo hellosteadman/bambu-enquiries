@@ -14,12 +14,17 @@ class EnquiryForm(forms.ModelForm):
     def save(self, commit = True):
         obj = super(EnquiryForm, self).save(commit = False)
         obj.message = sanitise(self.cleaned_data['message'], MARKDOWN)
-        
+
         if commit:
             obj.save()
-        
+
         return obj
-    
+
     class Meta:
         model = Enquiry
-        fields = ('name', 'email', 'subject', 'message')
+        fields = (
+            'name',
+            'email',
+            'subject',
+            'message'
+        )

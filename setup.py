@@ -4,14 +4,14 @@ from os import path
 
 setup(
     name = 'bambu-enquiries',
-    version = '2.0.1',
+    version = '3.0',
     description = 'A simple model and contact form',
     author = 'Steadman',
     author_email = 'mark@steadman.io',
     url = 'https://github.com/iamsteadman/bambu-enquiries',
     long_description = open(path.join(path.dirname(__file__), 'README')).read(),
     install_requires = [
-        'Django>=1.4',
+        'Django>=1.8',
         'requests',
         'bambu-mail'
     ],
